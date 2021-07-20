@@ -34,7 +34,7 @@ type TextMessage struct {
 	Receiver      string      `json:"receiver,omitempty"`
 	From          string      `json:"from,omitempty"`
 	MinAPIVersion uint        `json:"min_api_version,omitempty"`
-	Sender        Sender      `json:"sender"`
+	Sender        Sender      `json:"sender,omitempty"`
 	Type          MessageType `json:"type"`
 	TrackingData  string      `json:"tracking_data,omitempty"`
 	Text          string      `json:"text"`

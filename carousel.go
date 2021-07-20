@@ -3,6 +3,7 @@ package viber
 // RichMediaMessage / Carousel
 type RichMediaMessage struct {
 	AuthToken     string      `json:"auth_token"`
+	Sender        Sender      `json:"sender,omitempty"`
 	Receiver      string      `json:"receiver,omitempty"`
 	Type          MessageType `json:"type"`
 	MinAPIVersion int         `json:"min_api_version"`
