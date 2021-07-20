@@ -15,6 +15,7 @@ import (
 
 // Sender structure
 type Sender struct {
+	ID     string `json:"id,omitempty"`
 	Name   string `json:"name"`
 	Avatar string `json:"avatar,omitempty"`
 }
