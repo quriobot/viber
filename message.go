@@ -164,13 +164,12 @@ func (v *Viber) NewPictureMessage(msg string, url string, thumbURL string) *Pict
 }
 
 // NewFileMessage creates new file message
-func (v *Viber) NewFileMessage(msg string, url, fileName string, size uint) *FileMessage {
+func (v *Viber) NewFileMessage(url, fileName string, size uint) *FileMessage {
 	return &FileMessage{
 		URLMessage: URLMessage{
 			TextMessage: TextMessage{
 				Sender: v.Sender,
 				Type:   TypeFileMessage,
-				Text:   msg,
 			},
 			Media: url,
 		},
@@ -180,11 +179,10 @@ func (v *Viber) NewFileMessage(msg string, url, fileName string, size uint) *Fil
 }
 
 // NewFileMessage creates new file message
-func (v *Viber) NewVideoMessage(msg string, url, fileName string, size uint) *VideoMessage {
+func (v *Viber) NewVideoMessage(url, fileName string, size uint) *VideoMessage {
 	return &VideoMessage{
 		TextMessage: TextMessage{
 			Sender: v.Sender,
-			Text:   msg,
 			Type:   TypeVideoMessage,
 		},
 		Media:     url,
