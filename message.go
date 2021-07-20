@@ -207,13 +207,13 @@ func (v *Viber) SendPictureMessage(receiver string, msg string, url string, thum
 }
 
 // SendVideoMessage to receiver, returns message token
-func (v *Viber) SendVideoMessage(receiver string, msg string, url string, thumbURL string, size uint) (token uint64, err error) {
-	return v.SendMessage(receiver, v.NewVideoMessage(msg, url, thumbURL, size))
+func (v *Viber) SendVideoMessage(receiver string, url string, thumbURL string, size uint) (token uint64, err error) {
+	return v.SendMessage(receiver, v.NewVideoMessage(url, thumbURL, size))
 }
 
 // SendFileMessage to receiver, returns message token
-func (v *Viber) SendFileMessage(receiver string, msg string, url string, fileName string, size uint) (token uint64, err error) {
-	return v.SendMessage(receiver, v.NewFileMessage(msg, url, fileName, size))
+func (v *Viber) SendFileMessage(receiver string, url string, fileName string, size uint) (token uint64, err error) {
+	return v.SendMessage(receiver, v.NewFileMessage(url, fileName, size))
 }
 
 // SendPublicMessage from public account
